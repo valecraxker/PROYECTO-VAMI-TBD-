@@ -1,0 +1,149 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(235, 255, 255);
+}
+h1 {
+    color: #1f3893;
+    text-align:center;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+h2 {
+  color: #333;
+  text-align:center;
+}
+h3 {
+  color: #1f3893;
+  text-align:center;
+  font-size: 24px; 
+}
+p {
+  color: #333;
+  text-align:center;
+}
+/* Estilo normal del enlace */
+a {
+  color: #ff0000;
+  text-decoration: none; /* sin subrayado */
+  font-weight: bold; /* negrita */
+}
+
+/* Estilo cuando el mouse está sobre el enlace */
+a:hover {
+  color: #ffffff;
+  text-decoration: underline; /* subrayado al pasar el mouse */
+}
+
+/* Estilo cuando el enlace se está haciendo clic */
+a:active {
+  color: #ff2929; /* cambia a rojo */
+}
+
+/* Estilo para enlaces ya visitados */
+a:visited {
+  color: #000000; 
+}
+
+/* Estilo para el contenedor de la barra de navegación */
+nav {
+background-color: #7fb6ff;
+color: white;
+padding: 10px;
+}
+
+/* Estilo para los enlaces del menú */
+nav ul {
+list-style-type: none;
+margin: 0;
+padding: 0;
+display: flex;
+}
+
+nav ul li {
+margin-right: 20px;
+}
+
+nav ul li a {
+color: white;
+text-decoration: none;
+padding: 5px 10px;
+}
+
+nav ul li a:hover {
+background-color: #555;
+border-radius: 4px;
+}
+form {
+    width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+  }
+  
+  input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  button {
+    padding: 10px;
+    background-color: #1f3893;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: auto;
+  }
+  
+  button:hover {
+    background-color: #1f3893;
+    width: auto;
+  }
+  table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  th {
+    background-color: #1f3893;
+    color: white;
+  }
+  
+  tr:hover {
+    background-color: #f5f5f5;
+  }
+  
+  button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #1f3893;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: auto;
+  }
+  
+  button:hover {
+    background-color: #1f3893;
+    width: auto;
+  }
