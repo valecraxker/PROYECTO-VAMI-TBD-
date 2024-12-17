@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Actualizar paciente</title>
+  <link rel = "stylesheet" href="styles.css">
+</head>
+<body>
+    <h2>Actualizar datos del paciente</h2>
+    <form action="/actualizar-paciente" method="POST">
+      <label for="id">ID del paciente:</label>
+      <input type="number" id="id" name="id">
+    
+      <label for="name">Nombre del paciente:</label>
+      <input type="text" id="name" name="name">
+      
+      <label for="age">Edad:</label>
+      <input type="number" id="age" name="age">
+    
+      <label for="email">Correo:</label>
+      <input type="text" id="email" name="email">
+    
+      <label for="tipo_prueba">Tipo de prueba:</label>
+      <input type="text" id="tipo_prueba" name="tipo_prueba">
+    
+      <label for="fecha_registro">Fecha de registro:</label>
+      <input type="text" id="fecha_registro" name="fecha_registro">
+
+      <button type="submit">Actualizar datos del paciente</button>
+    </form>
+    
+    <h2>Eliminar paciente</h2>
+    <form action="/eliminar-paciente" method="POST">
+      <label for="id">ID del paciente:</label>
+      <input type="text" id="id" name="id">
+      <button type="submit">Eliminar paciente</button>
+    </form>
+    <button onclick="window.location.href='/pacientes'">Ver pacientes</button>
+    <button onclick="window.location.href='/'">Volver</button>
+</body>
+</html>
