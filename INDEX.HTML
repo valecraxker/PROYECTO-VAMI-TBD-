@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VamiLabs</title>
+  <link rel = "stylesheet" href="styles.css">
+</head>
+<body>
+  <h1> <img src="https://st4.depositphotos.com/18509294/20441/v/450/depositphotos_204416122-stock-illustration-microscope-simple-icon-illustration-vector.jpg" alt="" width="100"> VamiLabs</h1>
+  <!-- Incluir barra de navegación desde navbar.html -->
+  <br><div id="navbar"></div></br>
+  <script>
+      // Insertar el contenido de navbar.html en el elemento con id "navbar"
+      fetch('/navbar.html')
+          .then(response => response.text())
+          .then(data => {
+              document.getElementById('navbar').innerHTML = data;
+          })
+          .catch(error => console.error('Error cargando el navbar:', error));
+    // Solicitar el tipo de usuario y ajustar el menú en función de este
+      fetch('/tipo-usuario')
+          .then(response => response.json())
+          .then(data => {
+              const menu = document.getElementById('menu');
+              const tipoUsuario = data.tipo_usuario;
+
+              // Agregar opciones de menú según el tipo de usuario
+              if (tipoUsuario === 'laborista') {
+                  menu.innerHTML += '<li><a href="/busqueda.html">Búsqueda de pacientes</a></li>';
+                  menu.innerHTML += '<li><a href="/pacientes">Pacientes</a></li>';
+                  menu.innerHTML += '<li><a href="/submit.html">Insertar pacientes</a></li>';
+                  menu.innerHTML += '<li><a href="/actualizar.html">Actualizar/eliminar pacientes</a></li>';
+                  menu.innerHTML += '<li><a href="/ver-usuarios">Registros</a></li>';
+                  menu.innerHTML += '<li><a href="/archivos.html">Carga de archivos</a></li>';
+                  menu.innerHTML += '<li><a href="/extra.html">Funciones extras</a></li>';
+              } else if (tipoUsuario === 'paciente') {
+                  menu.innerHTML += '<li><a href="/ver-mis-datos">Ver mis datos</a></li>';
+                  menu.innerHTML += '<li><a href="/precios.html">Precios</a></li>';
+                  menu.innerHTML += '<li><a href="/archivos.html">Descarga de archivos</a></li>';
+              }
+              // Opción de cerrar sesión para todos los tipos de usuario
+              menu.innerHTML += '<li><a href="/logout">Cerrar Sesión</a></li>';
+          })
+          .catch(error => console.error('Error obteniendo el tipo de usuario:', error));
+  </script>
+  <div class="content">
+    <h3>VamiLabs confianza y precisión en cada diagnóstico</h3>
+    <p>En VamiLabs, somos un laboratorio clínico comprometido con tu salud y bienestar.</p>
+    <p>Ofrecemos servicios diagnósticos de alta calidad, utilizando tecnología avanzada y personal altamente capacitado para garantizar resultados precisos y confiables.</p>
+</div>
+<h1><img src="https://compassimaginglab.com/wp-content/uploads/2022/01/compass_laboratorio_interior_web-optimized.jpg" alt="" width="500"></h1>
+<h5>Contacto: (664) 593-2427</h5>
+<h5>Dirección: P.º de los Héroes 10999, Zona Urbana Rio Tijuana, 22010 Tijuana, B.C.</h5>
+<h5>Horario: Lunes a viernes 8:00 am - 5:00 pm</h5>
+</body>
+</html>
