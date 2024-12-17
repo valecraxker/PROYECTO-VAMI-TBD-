@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Analisis</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="navbar"></div>
+  <h2>Resultados de analisis</h2>
+  <form action="/upload" method="POST" enctype="multipart/form-data">
+    <input type="file" name="excelFile" accept=".xlsx" />
+    <button type="submit">Subir Archivo</button>
+  </form>
+  <button onclick="window.location.href='/download'">Descargar resultados en Excel</button>
+  <button onclick="window.location.href='/downloadpdf'">Descargar resultados en PDF</button>
+  <script src="navbar.html"></script>
+  <div id="navbar"></div>
+  <button onclick="window.location.href='/'">Volver</button>
+</body>
+</html>
