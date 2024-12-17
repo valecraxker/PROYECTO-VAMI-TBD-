@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Funciones extras</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h2>Funciones extras</h2>
+  <button onclick="window.location.href='/edadprom'">Edad promedio de los pacientes</button>
+  <button onclick="window.location.href='/contar-pacientes'">Total de pacientes registrados</button>
+  <button onclick="window.location.href='/ordenar-pacientes'">Ordenar pacientes por nombre</button>
+  <button onclick="window.location.href='/pacientes-vista'">Vistas-sangre</button>
+
+  <h2>Agregar columna al registro de pacientes</h2>
+  <form action="/insertar-columna" method="POST">
+    <label for="columna">Nombre de la columna a agregar:</label>
+    <input type="text" id="columna" name="columna" required>
+    <br>
+    <label for="tipo">Tipo de Dato:</label>
+    <select id="tipo" name="tipo" required>
+      <option value="INT">INT</option>
+      <option value="VARCHAR(255)">VARCHAR(255)</option>
+      <option value="TEXT">TEXT</option>
+      <option value="DATE">DATE</option>
+      <option value="FLOAT">FLOAT</option>
+      <option value="BOOLEAN">BOOLEAN</option>
+    </select>
+    <br>
+    <button type="submit">Agregar Columna</button>
+  </form>
+
+  <h2>Eliminar columna del registro de pacientes</h2>
+  <form action="/eliminar-columna" method="POST">
+    <label for="columna">Nombre de la columna a eliminar:</label>
+    <input type="text" id="columna" name="columna" required>
+    <button type="submit">Eliminar Columna</button>
+  </form>
+
+  <button onclick="window.location.href='/'">Volver</button>
+
+  <script>
+    // Mensaje de confirmación antes de enviar el formulario de eliminación
+    const eliminarForm = document.querySelector('form[action="/eliminar-columna"]');
+    eliminarForm.addEventListener('submit', (event) => {
+      const columna = document.getElementById('columna').value;
+      if (!confirm(`¿Estás seguro de que deseas eliminar la columna "${columna}" de la tabla de los pacientes?`)) {
+        event.preventDefault();
+      }
+    });
+  </script>
+</body>
+</html>
